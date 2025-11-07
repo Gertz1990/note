@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Заметки — Apple Style</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="title">Заметки</div>
+      <div class="actions">
+        <input class="search" placeholder="Поиск..." id="search" />
+        <button class="add" id="addBtn">+</button>
+      </div>
+    </header>
+
+    <section class="notes" id="notes">
+      <!-- пример заметок -->
+      <article class="note">
+        <h3 class="note-title">Покупки</h3>
+        <p class="note-body">Молоко, хлеб, яйца — проверить скидки.</p>
+        <div class="note-footer">
+          <time>Сегодня</time>
+          <button class="del">Удалить</button>
+        </div>
+      </article>
+
+      <article class="note">
+        <h3 class="note-title">Идея для проекта</h3>
+        <p class="note-body">Минималистичное приложение заметок с iCloud-like стилем.</p>
+        <div class="note-footer">
+          <time>Вчера</time>
+          <button class="del">Удалить</button>
+        </div>
+      </article>
+    </section>
+
+    <form id="editor" class="editor" onsubmit="return false;">
+      <input id="title" placeholder="Заголовок" />
+      <textarea id="body" placeholder="Текст заметки..."></textarea>
+      <div class="editor-actions">
+        <button id="save">Сохранить</button>
+        <button id="cancel" type="button">Отмена</button>
+      </div>
+    </form>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
